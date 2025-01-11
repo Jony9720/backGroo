@@ -26,8 +26,4 @@ app.use('/api/servicios', serviciosRoutes);
 app.use('/api/archivados', serviciosArchivados);
 app.use('/api/auth', authRoutes.router);
 
-// Sincronizar los modelos con la base de datos
-const PORT = process.env.PORT || 59444;
-app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
-});
+module.exports = app;
